@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TabGeek settings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+<header>
+  <img src="icons/icon48.png" alt="" style="width:40px;height:40px">
+  <div><div class="brand">TabGeek</div><h1>Settings</h1></div>
+</header>
+
+<div class="card">
+  <h2>When tabs go to sleep</h2>
+  <div class="row"><span>Put tabs to sleep after</span>
+    <select id="minutes">
+      <option value="5">5 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option>
+      <option value="60">1 hour</option><option value="120">2 hours</option><option value="360">6 hours</option>
+      <option value="1440">1 day</option><option value="0">Never (only when I ask)</option>
+    </select>
+    <span class="muted">without use</span>
+  </div>
+  <p class="muted">A sleeping tab stays in your tab bar with its title and icon. The page is unloaded from memory and loads again when you click the tab.</p>
+</div>
+
+<div class="card">
+  <h2>Keep these awake</h2>
+  <div class="row"><label><input type="checkbox" id="skipPinned"> Pinned tabs</label></div>
+  <div class="row"><label><input type="checkbox" id="skipAudible"> Tabs playing sound</label></div>
+  <div class="row"><label><input type="checkbox" id="skipForms"> Tabs with typing that is not saved (for example a half-written form)</label></div>
+  <p class="note" id="formNote">To spot unsaved typing, TabGeek needs to look at the page just before it goes to sleep. Your browser will ask for access to websites. TabGeek only checks the form boxes on the page and never sends anything anywhere.</p>
+</div>
+
+<div class="card">
+  <h2>Sites that never sleep</h2>
+  <p class="muted">Tabs on these sites are never put to sleep automatically. A site also covers its subdomains, so <code>google.com</code> covers <code>mail.google.com</code>.</p>
+  <div class="chiplist" id="sites"></div>
+  <p class="muted" id="noSites">No sites yet.</p>
+  <form class="row" id="addForm">
+    <input type="text" id="addSite" placeholder="example.com" style="flex:1;min-width:180px" autocomplete="off">
+    <button type="submit" class="small">Add site</button>
+  </form>
+  <div class="note bad" id="addErr"></div>
+</div>
+
+<div class="card">
+  <h2>Keyboard shortcuts</h2>
+  <table id="keys"><tbody></tbody></table>
+  <p class="muted" style="margin-top:8px">To change these, <a href="#" id="editKeys">open your browser's shortcut settings</a>.</p>
+</div>
+<p class="muted" style="margin:0 24px">TabGeek is free and open source, from <a href="https://techygeekshome.info/browser-extensions/tabgeek/" target="_blank" rel="noopener">TechyGeeksHome</a>. It has no account and no tracking.</p>
+<script src="options.js"></script>
+</body>
+</html>

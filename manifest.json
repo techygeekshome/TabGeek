@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "TabGeek: Tab Suspender",
+  "short_name": "TabGeek",
+  "version": "1.0.0",
+  "description": "Free up memory by putting tabs you have not used for a while to sleep. Keep pinned tabs, playing tabs and chosen sites awake.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "TabGeek: put tabs to sleep",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "suspend-tab": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Put this tab to sleep"
+    },
+    "suspend-others": {
+      "suggested_key": {
+        "default": "Alt+Shift+O"
+      },
+      "description": "Put other tabs in this window to sleep"
+    },
+    "wake-all": {
+      "description": "Wake all tabs in this window"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "homepage_url": "https://techygeekshome.info/browser-extensions/tabgeek/"
+}

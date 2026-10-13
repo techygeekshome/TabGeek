@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>TabGeek</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="popup">
+<header>
+  <img src="icons/icon32.png" alt="">
+  <div>
+    <div class="brand">TabGeek</div>
+    <div class="host" id="host">This tab</div>
+  </div>
+</header>
+
+<div class="status">
+  <div class="count"><span class="n" id="n">0</span><span class="of" id="of">tabs asleep</span></div>
+  <div class="bar"><i id="bar" style="width:0"></i></div>
+  <div class="muted" id="sub" style="margin-top:8px">Tabs you have not used for a while are put to sleep to free memory.</div>
+</div>
+
+<div class="acts">
+  <button id="this" title="Put this tab to sleep and move to the next one">Sleep this tab</button>
+  <button id="others" title="Put every other tab in this window to sleep">Sleep other tabs</button>
+  <button id="wake" class="wide ghost">Wake all tabs in this window</button>
+</div>
+<div class="msg" id="msg"></div>
+
+<div class="asleep" id="list"></div>
+
+<div class="box">
+  <div class="row"><span>Sleep tabs after</span>
+    <select id="minutes">
+      <option value="5">5 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option>
+      <option value="60">1 hour</option><option value="120">2 hours</option><option value="360">6 hours</option>
+      <option value="1440">1 day</option><option value="0">Never (only when I ask)</option>
+    </select>
+  </div>
+  <div class="row"><label><input type="checkbox" id="site"> Never put <b id="siteName">this site</b> to sleep</label></div>
+  <div class="row"><label><input type="checkbox" id="awake"> Keep this tab awake until I close it</label></div>
+  <div class="note" id="why"></div>
+</div>
+
+<div class="foot">
+  <span class="muted" id="keys"></span>
+  <a href="options.html" id="opts">Settings</a>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
