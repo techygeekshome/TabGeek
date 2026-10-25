@@ -1,10 +1,49 @@
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/icons/icon128.png" alt="TabGeek logo" width="96" height="96">
+
 # TabGeek: Tab Suspender
+
+**Free up memory by putting tabs you have not used for a while to sleep. Keep pinned tabs, playing tabs and chosen sites awake.**
+
+[![Version](https://img.shields.io/github/v/release/techygeekshome/TabGeek?label=version&color=4c9bff)](https://github.com/techygeekshome/TabGeek/releases)
+[![Platform](https://img.shields.io/badge/browser-Chrome%20%7C%20Edge%20%7C%20Firefox-0078d4)](#%EF%B8%8F-download--install)
+[![License](https://img.shields.io/badge/license-GPL--3.0-3fb950)](LICENSE)
+[![Made by TechyGeeksHome](https://img.shields.io/badge/made%20by-TechyGeeksHome-b191f2)](https://techygeekshome.info)
+[![Support on Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5e5b)](https://ko-fi.com/techygeekshome)
+
+[Download](#%EF%B8%8F-download--install) · [Features](#-what-it-does) · [Privacy](#-privacy) · [Full guide](https://techygeekshome.info/browser-extensions/tabgeek/) · [License](#-license)
+
+</div>
+
+---
+
+## 🎬 See it in action
+
+[![TabGeek demo video](https://img.youtube.com/vi/HqbmI-mapmA/maxresdefault.jpg)](https://www.youtube.com/watch?v=HqbmI-mapmA)
+
+---
 
 Free up memory by putting tabs you have not used for a while to sleep. Sleeping tabs stay in your tab bar with their title and icon, and load again the moment you click them.
 
-**Download and full guide:** https://techygeekshome.info/browser-extensions/tabgeek/
+The full guide, with every step explained, is on [TechyGeeksHome](https://techygeekshome.info/browser-extensions/tabgeek/).
 
-## What it does
+## 📸 Screenshots
+
+<p float="left">
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-asleep.jpg" width="49%" />
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-auto-sleep.jpg" width="49%" />
+</p>
+<p float="left">
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-awake.jpg" width="49%" />
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-menu.jpg" width="49%" />
+</p>
+<p float="left">
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-options.jpg" width="49%" />
+  <img src="https://raw.githubusercontent.com/techygeekshome/TabGeek/main/screenshots/tabgeek-tabs.jpg" width="49%" />
+</p>
+
+## ✨ What it does
 
 - **Sleeps unused tabs** after 5, 15 or 30 minutes, 1, 2 or 6 hours, or a day without use. Or turn automatic sleep off and only sleep tabs when you ask.
 - **Uses the browser's own tab sleeping** (`tabs.discard`). The page is not swapped for a placeholder, so your tabs, history and bookmarks keep the real address.
@@ -15,13 +54,13 @@ Free up memory by putting tabs you have not used for a while to sleep. Sleeping 
 - **See how many tabs are asleep** in the menu, with a list you can click to open one.
 - **Keyboard shortcuts**: `Alt+Shift+S` puts this tab to sleep, `Alt+Shift+O` puts the other tabs in the window to sleep. You can change them, and add one for waking all tabs, in your browser's shortcut settings.
 
-## What it won't do
+## 🚫 What it won't do
 
 - It does not save the contents of a sleeping page. A page reloads from the website when you wake it, so anything not saved on the site (like a half-written form) can be lost. Turn on **Tabs with typing that is not saved** to keep those awake.
 - It cannot sleep the tab you are looking at without moving you to another tab first. **Sleep this tab** does that for you. If it is the only tab in the window, TabGeek leaves it alone.
 - It does not measure memory. Browsers do not let extensions see how much memory each tab uses.
 
-## Install
+## ⬇️ Download & install
 
 Pick the download for your browser from the [latest release](https://github.com/techygeekshome/TabGeek/releases/latest).
 
@@ -51,25 +90,45 @@ Firefox removes temporary add-ons when it closes.
 
 The code in this repo is the Chromium version. `manifest.firefox.json` is the Firefox manifest. Run `./build.sh` to make every package in `dist/`.
 
-## Use
+## 🧭 How to use
 
 1. Install it. From now on, tabs you leave alone for 30 minutes go to sleep.
 2. Click the TabGeek icon to see how many tabs are asleep, change the time, or sleep tabs straight away.
 3. Tick **Never put this site to sleep** on sites you always want ready, such as your email or music player.
 4. Open **Settings** for the full list of sites, the keep-awake options and your shortcuts.
 
-## How it works
+## ⚙️ How it works
 
 - `background.js` notes the moment you switch away from each tab. Once a minute (using the browser's `alarms`) it puts to sleep any tab you have not used for longer than your chosen time, unless one of your keep-awake rules applies.
 - Sleeping uses `tabs.discard`, built into Chrome, Edge and Firefox. The browser frees the page's memory and keeps the tab.
 - The unsaved typing check only runs if you turn it on and allow access to websites. Just before a tab goes to sleep, TabGeek checks whether any form box on the page has been changed. Nothing is read or kept apart from that yes or no.
 
-## Privacy
+## 🔒 Privacy
 
 TabGeek has no account, no analytics and sends nothing anywhere. It never loads anything from the web itself. Your settings and site list are stored on your own computer, and the "last used" times are kept in memory only until the browser closes.
 
-## Licence
+## ☕ Support
+
+TabGeek is free and always will be. If it saved you some time, you can [buy us a coffee on Ko-fi](https://ko-fi.com/techygeekshome). Welcome, but never expected.
+
+## 🐛 Support & contributing
+
+Found a bug or have a request? [Open an issue](https://github.com/techygeekshome/TabGeek/issues) or [get in touch](https://techygeekshome.info/contact/). Pull requests are welcome.
+
+## 📄 License
 
 GPL-3.0. Free for everyone, including commercial use.
 
 TabGeek is an independent tool made by [TechyGeeksHome](https://techygeekshome.info).
+
+© 2026 TechyGeeksHome.
+
+---
+
+<div align="center">
+
+Made with ❤️ by [**TechyGeeksHome**](https://techygeekshome.info)
+
+[Website](https://techygeekshome.info) · [YouTube](https://www.youtube.com/channel/UCtEuFj1SMLiuRoucD1hv8dA) · [X](https://x.com/TechyGeeks1) · [Instagram](https://www.instagram.com/andrewarmstrongtgh/)
+
+</div>
